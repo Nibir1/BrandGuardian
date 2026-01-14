@@ -47,11 +47,15 @@ def validate_image_url(image_url: str) -> ImageValidationResponse:
     Returns:
         ImageValidationResponse: Compliance status and analysis.
     """
-    print(f"👁️ Vision Service analyzing: {image_url}")
+    # FIX: Explicitly cast Pydantic HttpUrl object to string
+    url_str = str(image_url)
+    
+    print(f"👁️ Vision Service analyzing: {url_str}")
     
     # 1. Download Image
     try:
-        response = httpx.get(image_url, timeout=10.0)
+        # FIX: Use the string 'url_str' instead of the object 'image_url'
+        response = httpx.get(url_str, timeout=10.0)
         response.raise_for_status()
         img = Image.open(BytesIO(response.content)).convert("RGB")
     except Exception as e:
