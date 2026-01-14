@@ -1,23 +1,36 @@
+# ---------------------------
 # Server & API
-fastapi>=0.109.0
-uvicorn[standard]>=0.27.0
+# ---------------------------
+fastapi>=0.109.0,<1.0
+uvicorn[standard]>=0.27.0,<1.0
 
-# AI Orchestration & RAG
-langchain>=0.1.0
-langchain-openai>=0.0.5
-langchain-community>=0.0.10
+# ---------------------------
+# AI Orchestration & RAG Core
+# ---------------------------
+langchain>=0.2.10,<1.0
+langchain-openai>=0.1.0
+langchain-community>=0.2.0
 
-# Vector Database
+# ---------------------------
+# Vector Database (NEW split)
+# ---------------------------
+langchain-chroma>=0.1.0
 chromadb>=0.4.22
 
-# Data Validation & Configuration
-pydantic>=2.6.0
+# ---------------------------
+# Data Validation & Settings
+# ---------------------------
+pydantic>=2.6.0,<3.0
 pydantic-settings>=2.1.0
 python-dotenv>=1.0.1
 
-# Image Processing (For Phase 4)
+# ---------------------------
+# Image Processing (Phase 4)
+# ---------------------------
 pillow>=10.2.0
 numpy>=1.26.0
 
-# Utilities
+# ---------------------------
+# Networking & Utilities
+# ---------------------------
 httpx>=0.26.0
