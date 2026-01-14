@@ -84,7 +84,7 @@ To verify the system's governance capabilities, use the following test cases in 
 1.  **Clone the repository**
     ```bash
     git clone https://github.com/Nibir1/BrandGuardian.git
-    cd brand-guardian
+    cd BrandGuardian
     ```
 
 2.  **Configure Environment**
